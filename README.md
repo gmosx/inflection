@@ -19,7 +19,8 @@ Usage
 Credits
 -------
 
-* George Moschovitis <george.moschovitis@gmail.com>
+* George Moschovitis, <george.moschovitis@gmail.com>
+* Brian McKenna, http://brianmckenna.org
 
 Ruby version
 
