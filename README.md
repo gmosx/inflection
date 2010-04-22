@@ -9,11 +9,11 @@ This is part of the [Nitro](http://www.nitrojs.org/) ecosystem of Web Applicatio
 Usage
 -----
 
-    var plural = require("inflection").plural
-    plural("entry"); // => "entries"
+    var pluralize = require("inflection").pluralize
+    pluralize("entry"); // => "entries"
 
-    var singular = require("inflection").singular
-    plural("words"); // => "word"
+    var singularize = require("inflection").singularize
+    singularize("words"); // => "word"
 
 
 Credits
