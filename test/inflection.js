@@ -1,7 +1,7 @@
 /**
  * These tests have been taken from Rails' ActiveSupport:Inflector tests.
  */
-var assert = require("test/assert"),
+var assert = require("assert"),
     inflection = require("inflection");
 
 var WORDS = [
@@ -107,19 +107,24 @@ var WORDS = [
 
 exports.testPluralize = function() {
     for (var i = 0; i < WORDS.length; i++) {
-	var pluralized = inflection.pluralize(WORDS[i][0]);
-	var plural = WORDS[i][1];
-	assert.isEqual(plural, pluralized);
+	    var pluralized = inflection.pluralize(WORDS[i][0]);
+	    var plural = WORDS[i][1];
+	    assert.equal(plural, pluralized);
     }
 }
 
 exports.testSingularize = function() {
     for (var i = 0; i < WORDS.length; i++) {
-	var singularized = inflection.singularize(WORDS[i][1]);
-	var singular = WORDS[i][0];
-	assert.isEqual(singular, singularized);
+	    var singularized = inflection.singularize(WORDS[i][1]);
+	    var singular = WORDS[i][0];
+	    assert.equal(singular, singularized);
     }
 }
 
-if (require.main == module)
-    require("os").exit(require("test/runner").run(exports));
+exports.testHumanize = function() {
+	assert.equal(inflection.humanize("employeeSalary"), "employee salary");
+}
+
+if (module === require.main) {
+    require("test").run(exports);
+}    
